@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -161,9 +161,7 @@ public class HomeActivity extends AppCompatActivity {
 							Random random = new Random();
 							// For Boolean Type Questions, only 2 possible options (True/False)
 							// For multiple choices, 4 options are required.
-							int ran = r.getType().equals("boolean")
-									? random.nextInt(2)
-									: random.nextInt(4);
+							int ran = r.getType().equals("boolean") ? random.nextInt(2) : random.nextInt(4);
 							setOptions(r, ran);
 							q.Answer.add(ran + 1);
 						}

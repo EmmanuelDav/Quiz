@@ -4,8 +4,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -83,11 +83,9 @@ public class QuizActivity extends AppCompatActivity {
 
 	public void goNext() {
 		ques++;
-
 		if (ques >= qAndA.question.size()) {
 			ques = qAndA.question.size() - 1;
 		}
-
 		q_no.setVisibility(View.VISIBLE);
 		opA.setVisibility(View.VISIBLE);
 		opB.setVisibility(View.VISIBLE);
